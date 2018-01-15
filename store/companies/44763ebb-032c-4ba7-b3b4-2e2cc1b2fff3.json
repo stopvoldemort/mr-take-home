@@ -1,3 +1,8 @@
 {
-  "name": "MCM Enterprises"
+  "name": "MCM Enterprises",
+  "email": "email@email.com",
+  "phone_number": "123-456-7890",
+  "city": "Brooklyn",
+  "state": "New York",
+  "company_type": "factory"
 }
