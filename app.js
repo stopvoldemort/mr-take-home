@@ -1,20 +1,19 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const factoryRoutes = require('./routes/factories');
-const brandRoutes = require('./routes/brands');
+const companyRoutes = require('./routes/companies')
 const app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/factories', factoryRoutes);
-app.use('/brands', brandRoutes);
+app.use('/factories', companyRoutes);
+app.use('/brands', companyRoutes);
 
 // going to http://localhost:3000/ in your browser should yield 'OK'
 app.get('/', (req, res) => {
-    res.sendStatus(200);
+  res.sendStatus(200);
 });
 
 // catch 404 and forward to error handler
